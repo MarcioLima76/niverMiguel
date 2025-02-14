@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniversário do Miguel Arthur 12</title>
+    <style>
+        body {
+            font-family: 'Arial Black', Arial, sans-serif;
+            background-color: #B0E0E6;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            color: #FF4444;
+            font-size: 2.5em;
+            margin: 0;
+            text-transform: uppercase;
+        }
+        
+        .age {
+            font-size: 4em;
+            color: #FFD700;
+            margin: 10px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .convocado {
+            color: #228B22;
+            font-size: 1.8em;
+            margin: 20px 0;
+        }
+        
+        .address {
+            background-color: #F0F8FF;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            line-height: 1.5;
+        }
+        
+        .date {
+            font-size: 2em;
+            color: #FF4444;
+            margin: 15px 0;
+        }
+        
+        .obs {
+            background-color: #FFFACD;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        
+        button {
+            background-color: #228B22;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+        
+        button:hover {
+            transform: scale(1.1);
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            .age {
+                font-size: 3em;
+            }
+            .convocado {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>ANIVERSÁRIO DO<br>MIGUEL ARTHUR</h1>
+        <div class="age">12 anos</div>
+        <div class="convocado">VOCÊ ESTÁ CONVOCADO!</div>
+
+        <div class="container">
+            <!-- ... (keep previous content) ... -->
+
+            <div class="address">
+                <a href="https://www.google.com.br/maps/place/Recanto+da+%C3%81guia/@-23.4138458,-51.860855,17z/data=!3m1!4b1!4m6!3m5!1s0x94ecd17e4130ebe9:0x7af9000bccff4f2f!8m2!3d-23.4138507!4d-51.8582801!16s%2Fg%2F11jt0h90mq?entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank" rel="noopener noreferrer">
+                    <strong>CHÁCARA RECANTO DAS ÁGUIAS</strong><br> RUA VALTER VIARO (ANTIGA RUA 39), 93<br> JARDIM NOVA INDEPENDÊNCIA,<br> SARANDI - PR
+                    <span class="map-link">(Clique para ver no mapa)</span>
+                </a>
+            </div>
+
+            <!-- ... (rest of the content remains the same) ... -->
+        </div>
+
+        <div class="date">22/03/2025</div>
+
+        <button onclick="confirmPresence()">CONFIRMAR PRESENÇA</button>
+
+        <div class="obs">
+            OBS: TRAGA SEU TRAJE DE BANHO
+        </div>
+    </div>
+
+    <script>
+        function confirmPresence() {
+            alert('Sua presença foi confirmada! 🎉\nContamos com você!');
+            const button = document.querySelector('button');
+            button.textContent = 'PRESENÇA CONFIRMADA ✔';
+            button.style.backgroundColor = '#4CAF50';
+            button.disabled = true;
+        }
+    </script>
+</body>
+
+</html>
