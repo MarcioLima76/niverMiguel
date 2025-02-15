@@ -130,14 +130,22 @@
     </div>
 
     <script>
-        function confirmPresence() {
-            alert('Sua presença foi confirmada! 🎉\nContamos com você!');
-            const button = document.querySelector('button');
-            button.textContent = 'PRESENÇA CONFIRMADA ✔';
-            button.style.backgroundColor = '#4CAF50';
-            button.disabled = true;
-        }
-    </script>
+    function confirmPresence() {
+        const phone = '5544999304393';
+        const message = encodeURIComponent('Por favor, confirme os nomes das pessoas que irão no aniversário do Miguel Arthur');
+        const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
+        
+        // Open WhatsApp in new tab
+        window.open(whatsappUrl, '_blank');
+        
+        // Update button and show confirmation
+        alert('Presença confirmada! Obrigado por responder!');
+        const button = document.querySelector('button');
+        button.textContent = 'PRESENÇA CONFIRMADA ✔';
+        button.style.backgroundColor = '#4CAF50';
+        button.disabled = true;
+    }
+</script>
 </body>
 
 </html>
