@@ -60,6 +60,14 @@
             color: #FF4444;
             margin: 15px 0;
         }
+        .deadline-message {
+            color: #0000FF;
+            font-size: 1.2em;
+            margin: 15px 0;
+            font-weight: bold;
+            text-align: center;
+        }
+        
         
         .obs {
             background-color: #FFFACD;
@@ -103,7 +111,7 @@
     <div class="container">
         <h1>ANIVERSÁRIO DO<br>MIGUEL ARTHUR</h1>
         <div class="age">12 anos</div>
-        <div class="convocado">VOCÊ ESTÁ CONVOCADO!</div>
+        <div class="convocado">VOCÊ ESTÁ CONVIDADO!</div>
 
         <div class="container">
             <!-- ... (keep previous content) ... -->
@@ -111,7 +119,7 @@
             <div class="address">
                 <a href="https://www.google.com.br/maps/place/Recanto+da+%C3%81guia/@-23.4138458,-51.860855,17z/data=!3m1!4b1!4m6!3m5!1s0x94ecd17e4130ebe9:0x7af9000bccff4f2f!8m2!3d-23.4138507!4d-51.8582801!16s%2Fg%2F11jt0h90mq?entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank" rel="noopener noreferrer">
-                    <strong>CHÁCARA RECANTO DAS ÁGUIAS</strong><br> RUA VALTER VIARO (ANTIGA RUA 39), 93<br> JARDIM NOVA INDEPENDÊNCIA,<br> SARANDI - PR
+                    <strong>CHÁCARA RECANTO DA ÁGUIA</strong><br> RUA VALTER VIARO (ANTIGA RUA 39), Nº 93, Portão 3<br> JARDIM NOVA INDEPENDÊNCIA,<br> SARANDI - PR
                     <span class="map-link">(Clique para ver no mapa)</span>
                 </a>
             </div>
@@ -121,6 +129,10 @@
 
         <div class="date">22/03/2025</div>
         <div class="time">A partir das 14:00 hrs.</div>
+        <div class="time">Término previsto para as 19:00 hrs.</div>
+        <div class="deadline-message">
+            FAVOR CONFIRMAR PRESENÇA ATÉ 15/03/2025
+        </div>
 
         <button onclick="confirmPresence()">CONFIRMAR PRESENÇA</button>
 
@@ -130,22 +142,22 @@
     </div>
 
     <script>
-    function confirmPresence() {
-        const phone = '5544999304393';
-        const message = encodeURIComponent('Por favor, confirme os nomes das pessoas que irão no aniversário do Miguel Arthur');
-        const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
-        
-        // Open WhatsApp in new tab
-        window.open(whatsappUrl, '_blank');
-        
-        // Update button and show confirmation
-        alert('Presença confirmada! Obrigado por responder!');
-        const button = document.querySelector('button');
-        button.textContent = 'PRESENÇA CONFIRMADA ✔';
-        button.style.backgroundColor = '#4CAF50';
-        button.disabled = true;
-    }
-</script>
+        function confirmPresence() {
+            const phone = '5544999304393';
+            const message = encodeURIComponent('Por favor, confirme os nomes das pessoas que irão no aniversário do Miguel Arthur:');
+            const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
+
+            // Open WhatsApp in new tab
+            window.open(whatsappUrl, '_blank');
+
+            // Update button and show confirmation
+            alert('Presença confirmada! Obrigado por responder!');
+            const button = document.querySelector('button');
+            button.textContent = 'PRESENÇA CONFIRMADA ✔';
+            button.style.backgroundColor = '#4CAF50';
+            button.disabled = true;
+        }
+    </script>
 </body>
 
 </html>
